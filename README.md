@@ -1,3 +1,9 @@
+### This project was forked only to we could minify Liferay CE 6.2 js's theme on build time.
+
+### 1 - [How to minify all Js files of Liferay Theme using YUI - Compressor](https://github.com/seatecnologia/yui-compressor-ant-task/wiki/How-to-minify-all-Js-files-of-Liferay-Theme-using-YUI---Compressor)
+
+##
+
 ## Introduction
 
 This project provides a custom Ant task for compressing JavaScript and CSS files using [YUI Compressor](http://developer.yahoo.com/yui/compressor/). 
@@ -62,4 +68,6 @@ Here's another example that compresses both CSS and JavaScript files:
         </target>
 
 </project>
+
+
 

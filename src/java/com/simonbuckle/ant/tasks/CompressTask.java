@@ -1,6 +1,13 @@
 package com.simonbuckle.ant.tasks;
 
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.Reader;
+import java.io.Writer;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -14,13 +21,13 @@ import org.apache.tools.ant.types.Mapper;
 
 import com.yahoo.platform.yui.compressor.CssCompressor;
 import com.yahoo.platform.yui.compressor.JavaScriptCompressor;
-
-import org.mozilla.javascript.ErrorReporter;
-import org.mozilla.javascript.EvaluatorException;
+import com.yahoo.platform.yui.compressor.org.mozilla.javascript.ErrorReporter;
+import com.yahoo.platform.yui.compressor.org.mozilla.javascript.EvaluatorException;
 
 /**
  * @author Simon Buckle
  */
+
 public class CompressTask extends Task {
 
 	private List<FileSet> filesets = new ArrayList<FileSet>();
@@ -131,7 +138,7 @@ public class CompressTask extends Task {
 			log("Compressing: " + source.getName());
 
 			compressor.compress(out, 
-					linebreak, 
+					out, linebreak, 
 					munge,
 					verbose,
 					preserveAllSemiColons,

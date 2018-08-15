@@ -38,7 +38,7 @@
 		<jar jarfile="${dist.dir}/${jar.name}" basedir="${build.dir}/jar">
 			<!--
 			<manifest>
-				<attribute name="Class-Path" value="yuicompressor-2.4.2.jar" />
+				<attribute name="Class-Path" value="yuicompressor-2.4.8.jar" />
 			</manifest>
 			-->
 		</jar>
